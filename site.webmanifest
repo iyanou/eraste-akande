@@ -1,0 +1,32 @@
+{
+  "name": "Iyanou Eraste AKANDE - Elasticsearch Consultant & Trainer",
+  "short_name": "Eraste AKANDE",
+  "description": "Certified Elasticsearch Consultant, Elastic Gold Contributor, and Data Engineer. Expert in ELK Stack, data pipelines, and telecommunications.",
+  "start_url": "/eraste-akande/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007BFF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/eraste-akande/eraste_Akande.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/eraste-akande/eraste_Akande.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "education",
+    "business",
+    "productivity"
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/eraste-akande/"
+}
