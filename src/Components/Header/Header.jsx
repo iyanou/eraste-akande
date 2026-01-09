@@ -73,17 +73,21 @@ const Header = () => {
   ];
 
   return (
-      <header id="header" className={`header ${isScrolled ? 'scrolled' : ''}`}>
-        <div className="header-container">
-          <div className="logo">
-            <a href="/" aria-label="Home">
+      <>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        <header id="header" className={`header ${isScrolled ? 'scrolled' : ''}`} role="banner">
+          <div className="header-container">
+            <div className="logo">
+            <Link to="/" aria-label="Home">
               <span className="logo-text">Iyanou Eraste AKANDE</span>
               <span className="logo-subtitle">Data Engineer | Elasticsearch Consultant</span>
-            </a>
+            </Link>
           </div>
           
-          <nav className={`nav-desktop ${isMenuOpen ? 'active' : ''}`}>
-            <ul className="nav-list">
+          <nav className={`nav-desktop ${isMenuOpen ? 'active' : ''}`} aria-label="Main navigation" role="navigation">
+            <ul className="nav-list" role="menubar">
               {navItems.map((item, index) => (
                 <li key={index} className={`nav-item ${item.dropdown ? 'has-dropdown' : ''}`}>
                   {item.dropdown ? (
@@ -176,6 +180,7 @@ const Header = () => {
           </ul>
         </div>
       </header>
+    </>
   );
 };
 

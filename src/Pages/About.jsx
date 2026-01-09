@@ -18,7 +18,7 @@ function About () {
     return (
         <>
             <Header/>
-            <main>
+            <main id="main-content" role="main">
                 <AboutHero/>
                 {/* <AboutExpertiseTelecom/> */}
                 <AboutBio/>

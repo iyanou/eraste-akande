@@ -107,6 +107,16 @@ const Expertise = () => {
       icon: "flink.svg"
     },
     {
+      name: "Apache Nifi",
+      level: 78,
+      icon: "nifi.svg"
+    },
+    {
+      name: "Apache Superset",
+      level: 80,
+      icon: "superset.svg"
+    },
+    {
       name: "4G/LTE Networks",
       level: 92,
       icon: "4g.svg"
@@ -144,35 +154,36 @@ const Expertise = () => {
   ];
 
   return (
-    <section id="expertise" ref={sectionRef} className="expertise-section">
+    <section id="expertise" ref={sectionRef} className="expertise-section" aria-label="Technical skills and expertise">
       <div className="expertise-container">
         <div className="expertise-header">
           <h2 className="expertise-title">Technical Expertise</h2>
-          <div className="expertise-title-underline"></div>
+          <div className="expertise-title-underline" aria-hidden="true"></div>
           <p className="expertise-subtitle">
             Mastered technology stack to meet your data needs
           </p>
         </div>
 
-        <div className="expertise-grid">
+        <div className="expertise-grid" role="list">
           {technologies.map((tech, index) => (
-            <div 
-              key={index} 
-              className="expertise-item" 
+            <div
+              key={index}
+              className="expertise-item"
               ref={addToRefs}
               style={{ animationDelay: `${index * 0.1}s` }}
+              role="listitem"
             >
-              <div className="expertise-icon-placeholder" aria-label={`${tech.name} icon`}>
+              <div className="expertise-icon-placeholder" aria-hidden="true">
                 {tech.name.charAt(0)}
               </div>
               <div className="expertise-content">
                 <div className="expertise-name-container">
                   <h3 className="expertise-name">{tech.name}</h3>
-                  <span className="expertise-level">{tech.level}%</span>
+                  <span className="expertise-level" aria-label={`Proficiency level: ${tech.level} percent`}>{tech.level}%</span>
                 </div>
-                <div className="expertise-progress-container">
-                  <div 
-                    className="expertise-progress-bar" 
+                <div className="expertise-progress-container" role="progressbar" aria-valuenow={tech.level} aria-valuemin="0" aria-valuemax="100" aria-label={`${tech.name} proficiency`}>
+                  <div
+                    className="expertise-progress-bar"
                     style={{ width: `${tech.level}%` }}
                   ></div>
                 </div>

@@ -45,11 +45,11 @@ const Hero = () => {
   }, [heroContent.length]);
 
   return (
-    <section id="hero">
+    <section id="hero" aria-label="Hero section - Introduction">
       <div className="hero-container">
         <div className="hero-content">
           <div className="title-container">
-            <h1 className={`hero-title ${isVisible ? 'content-visible' : 'content-hidden'}`}>
+            <h1 className={`hero-title ${isVisible ? 'content-visible' : 'content-hidden'}`} aria-live="polite">
               {heroContent[currentIndex].title}
             </h1>
           </div>
@@ -59,22 +59,28 @@ const Hero = () => {
             </p>
           </div>
           <div className="hero-cta">
-            <Link to="/contact" className="cta-button primary">
-              Let's talk <ArrowRight size={18} className="cta-icon" />
+            <Link to="/contact" className="cta-button primary" aria-label="Contact me to discuss your project">
+              Let's talk <ArrowRight size={18} className="cta-icon" aria-hidden="true" />
             </Link>
-            <Link to="/skills" className="cta-button secondary">
+            <Link to="/skills" className="cta-button secondary" aria-label="View my technical skills and expertise">
               View my expertise
             </Link>
           </div>
         </div>
-        <div className="hero-visual">
+        <div className="hero-visual" role="img" aria-label="Professional profile showcase">
           <div className="hero-image">
             <div className="image-container">
               <div className="profile-image">
-                <img src={iyanuEraste} alt="Eraste akande" />
+                <img
+                  src={iyanuEraste}
+                  alt="Iyanou Eraste AKANDE - Elasticsearch Consultant and Trainer"
+                  loading="eager"
+                  width="400"
+                  height="400"
+                />
               </div>
             </div>
-            <div className="tech-dots">
+            <div className="tech-dots" aria-hidden="true">
               <span className="tech-dot" style={{ animationDelay: '0.2s' }}></span>
               <span className="tech-dot" style={{ animationDelay: '0.5s' }}></span>
               <span className="tech-dot" style={{ animationDelay: '0.8s' }}></span>

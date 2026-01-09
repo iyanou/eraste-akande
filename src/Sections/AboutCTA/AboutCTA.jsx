@@ -1,12 +1,12 @@
 // AboutCTA.jsx
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import './AboutCTA.css';
 import { Link } from 'react-router-dom';
 
 const AboutCTA = () => {
   const ctaRef = useRef(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -16,11 +16,11 @@ const AboutCTA = () => {
       },
       { threshold: 0.1 }
     );
-    
+
     if (ctaRef.current) {
       observer.observe(ctaRef.current);
     }
-    
+
     return () => {
       if (ctaRef.current) {
         observer.unobserve(ctaRef.current);
@@ -40,6 +40,14 @@ const AboutCTA = () => {
             <span>Let's talk</span>
             <ArrowRight size={18} />
           </Link>
+          <a
+            href="/eraste-akande/CV.pdf"
+            download="Iyanou_Eraste_AKANDE_CV.pdf"
+            className="about-cta__button about-cta__button--secondary"
+          >
+            <Download size={18} />
+            <span>Download CV</span>
+          </a>
           <Link to="/skills" className="about-cta__button about-cta__button--secondary">
             View my expertise
           </Link>

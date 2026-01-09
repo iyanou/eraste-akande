@@ -42,12 +42,22 @@ const Temoignages = () => {
             <Award size={48} color="#E4B31A" />
           </div>
           <p className="temoignages-quote">
-            "Already more than <span className="temoignages-highlight">100 professionals</span> trained in Elasticsearch online and in-company."
+            "More than <span className="temoignages-highlight">3,000 professionals</span> trained in Elasticsearch through online courses and corporate training programs."
           </p>
-        </div>
-        
-        <div className="temoignages-future-indicator">
-          <p>Client testimonials coming soon</p>
+          <div className="temoignages-stats">
+            <div className="stat-item">
+              <span className="stat-number">4.7⭐</span>
+              <span className="stat-label">Average Rating</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">25+</span>
+              <span className="stat-label">Hours of Content</span>
+            </div>
+            <div className="stat-item">
+              <span className="stat-number">3,000+</span>
+              <span className="stat-label">Students Trained</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

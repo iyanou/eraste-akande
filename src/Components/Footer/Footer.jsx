@@ -1,10 +1,9 @@
 // Footer.jsx
 import { useState } from 'react';
-import { Linkedin, Twitter, Mail, Github, MapPin, Phone, ArrowRight, ChevronUp } from 'lucide-react';
+import { Linkedin, Mail, Github, MapPin, Phone, ChevronUp } from 'lucide-react';
 import './Footer.css';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   // Check when user has scrolled enough to show back to top button
@@ -13,17 +12,6 @@ const Footer = () => {
       setShowScrollTop(window.scrollY > 300);
     });
   }
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Logic to process newsletter subscription
-    alert(`Thank you for subscribing with email: ${email}`);
-    setEmail('');
-  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -35,7 +23,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="footer">
+    <footer id="footer" role="contentinfo" aria-label="Site footer">
       <div className="footer-container">
         <div className="footer-top">
           <div className="footer-info">
@@ -46,16 +34,13 @@ const Footer = () => {
               and training services to optimize your data solutions.
             </p>
             <div className="footer-social">
-              <a href="https://linkedin.com/" aria-label="LinkedIn" className="social-icon">
+              <a href="https://www.linkedin.com/in/iyanou-eraste-akande/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-icon">
                 <Linkedin size={20} />
               </a>
-              <a href="https://twitter.com/" aria-label="Twitter" className="social-icon">
-                <Twitter size={20} />
-              </a>
-              <a href="https://github.com/" aria-label="GitHub" className="social-icon">
+              <a href="https://github.com/iyanou" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="social-icon">
                 <Github size={20} />
               </a>
-              <a href="mailto:contact@example.com" aria-label="Email" className="social-icon">
+              <a href="mailto:eraste.akande@gmail.com" aria-label="Email" className="social-icon">
                 <Mail size={20} />
               </a>
             </div>
@@ -98,28 +83,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <Mail size={16} />
-                  <span>eraste@erasteakande.com</span>
+                  <span>eraste.akande@gmail.com</span>
                 </li>
               </ul>
             </div>
-          </div>
-
-          <div className="footer-newsletter">
-            <h4>Newsletter</h4>
-            <p>Subscribe to receive my latest articles and tips on data engineering and Elasticsearch.</p>
-            <form onSubmit={handleSubmit} className="newsletter-form">
-              <input
-                type="email"
-                placeholder="Your email"
-                value={email}
-                onChange={handleEmailChange}
-                required
-                aria-label="Email address for newsletter"
-              />
-              <button type="submit" aria-label="Subscribe to newsletter">
-                <ArrowRight size={20} />
-              </button>
-            </form>
           </div>
         </div>
 

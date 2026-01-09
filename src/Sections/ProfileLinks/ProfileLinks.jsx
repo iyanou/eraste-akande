@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Linkedin, Award, FileText, Globe, BarChart } from 'lucide-react';
 import './ProfileLinks.css';
-// Import CV file
-import cvPDF from '../../assets/PDF/CV_Eraste_AKANDE.pdf'; // Make sure the path is correct according to your folder structure
 import { Link } from 'react-router-dom';
 
 const ProfileLinks = () => {
@@ -33,7 +31,7 @@ const ProfileLinks = () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current);
       }
-     
+
       linksRef.current.forEach((link) => {
         if (link) observer.unobserve(link);
       });
@@ -41,10 +39,10 @@ const ProfileLinks = () => {
   }, []);
 
   const handleDownloadCV = () => {
-    // Create an <a> element to download the PDF
+    // Create an <a> element to download the PDF from public folder
     const link = document.createElement('a');
-    link.href = cvPDF;
-    link.download = 'Iyanou-Eraste-Akande-CV.pdf'; // File name when downloading
+    link.href = '/eraste-akande/CV.pdf';
+    link.download = 'Iyanou_Eraste_AKANDE_CV.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

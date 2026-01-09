@@ -55,17 +55,17 @@ const TrainingHero = () => {
       <div className="training-hero__stats" ref={statsRef}>
         <div className="training-hero__stat-item">
           <Award className="training-hero__stat-icon" aria-hidden="true" />
-          <span className="training-hero__stat-number">100+</span>
+          <span className="training-hero__stat-number">3000+</span>
           <p className="training-hero__stat-text">Professionals trained</p>
         </div>
         <div className="training-hero__stat-item">
           <Users className="training-hero__stat-icon" aria-hidden="true" />
-          <span className="training-hero__stat-number">4.5+</span>
+          <span className="training-hero__stat-number">4.7+</span>
           <p className="training-hero__stat-text">Average Udemy rating</p>
         </div>
         <div className="training-hero__stat-item">
           <BookOpen className="training-hero__stat-icon" aria-hidden="true" />
-          <span className="training-hero__stat-number">8h+</span>
+          <span className="training-hero__stat-number">25h+</span>
           <p className="training-hero__stat-text">Exclusive content</p>
         </div>
       </div>

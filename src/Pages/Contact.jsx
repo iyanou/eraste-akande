@@ -14,7 +14,7 @@ function Contact () {
     return (
         <>
             <Header/>
-            <main>
+            <main id="main-content" role="main">
                 <ContactBanner/>
                 <ContactHome/>
                 {/* <AlternativeContacts/> */}

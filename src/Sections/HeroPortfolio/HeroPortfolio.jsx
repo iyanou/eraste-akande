@@ -57,7 +57,7 @@ const HeroPortfolio = () => {
       <div className="hero-portfolio__container">
         <div ref={contentRef} className="hero-portfolio__content">
           <h1 ref={titleRef} className="hero-portfolio__title" id="hero-title">
-             Elasticsearch & Telecommunications at the service of performance
+             Elasticsearch and Elastic Stack at the service of performance
           </h1>
           <p ref={subtitleRef} className="hero-portfolio__subtitle">
             Discover my optimization and Elastic Stack implementation projects that have enabled my clients to improve their decision-making and operational performance.

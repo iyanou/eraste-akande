@@ -64,7 +64,150 @@
     margin: 0 auto;
     border-radius: 2px;
   }
-  
+
+  #formation .formation-subtitle {
+    font-size: 1.1rem;
+    color: #4A4A4A;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Course Cards Grid */
+  #formation .formation-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  #formation .formation-course-card {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(30, 42, 56, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+  }
+
+  #formation .formation-course-card.visible {
+    animation-name: fadeInUp;
+  }
+
+  #formation .formation-course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(30, 42, 56, 0.15);
+  }
+
+  #formation .course-badge {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: linear-gradient(135deg, #E4B31A, #f0c24e);
+    color: #1E2A38;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  #formation .course-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1E2A38;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    padding-right: 60px;
+  }
+
+  #formation .course-description {
+    font-size: 1rem;
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  #formation .course-rating {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #E4B31A;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  #formation .course-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  #formation .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #4A4A4A;
+  }
+
+  #formation .meta-item svg {
+    color: #007BFF;
+  }
+
+  #formation .course-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007BFF;
+    color: white;
+    font-weight: 600;
+    padding: 0.9rem 1.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  }
+
+  #formation .course-cta:hover {
+    background-color: #0069d9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+  }
+
+  #formation .course-cta svg {
+    transition: transform 0.3s ease;
+  }
+
+  #formation .course-cta:hover svg {
+    transform: translateX(5px);
+  }
+
+  /* Features Section */
+  #formation .features-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1E2A38;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  #formation .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
   #formation .formation-content {
     display: flex;
     gap: 4rem;
@@ -252,8 +395,12 @@
   
   /* Responsive design */
   @media screen and (max-width: 1024px) {
-    #formation .formation-features {
+    #formation .formation-courses-grid {
       grid-template-columns: 1fr;
+    }
+
+    #formation .features-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   
@@ -277,13 +424,32 @@
     #formation {
       padding: 4rem 1rem;
     }
-    
+
     #formation .formation-title {
       font-size: 2rem;
     }
-    
-    #formation .formation-details-title {
-      font-size: 1.6rem;
+
+    #formation .formation-courses-grid {
+      gap: 1.5rem;
+    }
+
+    #formation .course-title {
+      font-size: 1.2rem;
+      padding-right: 0;
+    }
+
+    #formation .course-badge {
+      position: static;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    #formation .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #formation .features-title {
+      font-size: 1.8rem;
     }
   }
   

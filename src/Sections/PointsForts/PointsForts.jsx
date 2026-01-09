@@ -7,33 +7,33 @@ const PointsForts = () => {
   const points = [
     {
       icon: <Award size={36} />,
-      title: "Certified Elastic Engineer Consultant",
-      description: "Official certification guaranteeing the application of best practices for performance, security, and scalability of Elasticsearch clusters."
+      title: "Triple Elastic Certified Expert",
+      description: "Certified Elasticsearch Engineer, Observability Engineer, and Data Analyst - demonstrating comprehensive expertise across the Elastic Stack ecosystem."
     },
     {
       icon: <Globe size={36} />,
       title: "Elastic Gold Contributor 2024-2025",
-      description: "Distinction awarded by Elastic in recognition of my technical contributions to the community."
+      description: "Elite recognition from Elastic for significant technical contributions and community leadership across Europe, Africa, and Asia."
     },
     {
       icon: <GraduationCap size={36} />,
-      title: "Udemy Trainer – 4.5+ stars",
-      description: "Author of training courses followed by over 100 professionals, available online and in-company."
+      title: "Udemy Instructor – 4.7⭐ Rating",
+      description: "Trusted educator with 3,000+ students trained worldwide through comprehensive Elasticsearch courses available online and in corporate settings."
     },
     {
       icon: <Award size={36} />,
-      title: "ITU Academy Certification",
-      description: "Certified in telecommunications network quality of service."
+      title: "ITU Academy Certified",
+      description: "Internationally certified in telecommunications Quality of Service (QoS) and Quality of Experience (QoE) by the International Telecommunication Union."
     },
     {
       icon: <Network size={36} />,
-      title: "Mobile Network Architecture",
-      description: "Strong mastery of 2G/3G/4G mobile network architecture, KPIs, and their operational monitoring."
+      title: "Mobile Network Specialist",
+      description: "Deep expertise in 2G/3G/4G/LTE mobile network architectures, performance KPIs, and real-time operational monitoring systems."
     },
     {
       icon: <FileText size={36} />,
-      title: "Author of 4G QoS Project",
-      description: "Detailed project on 4G QoS monitoring, including network architecture and QoS indicators.",
+      title: "Published 4G QoS Research",
+      description: "Comprehensive research project on 4G Quality of Service monitoring, covering network architecture, performance indicators, and optimization strategies.",
       lien: "https://fr.scribd.com/document/740152086/Developpement-d-une-solution-de-monitoring-et-d-analyse-des-performances-4G"
     },
   ];

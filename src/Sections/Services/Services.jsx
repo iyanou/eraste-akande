@@ -81,20 +81,21 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" ref={sectionRef} className="services-section">
+    <section id="services" ref={sectionRef} className="services-section" aria-label="Professional services offered">
       <div className="services-container">
         <div className="services-header">
           <h2 className="services-title">My services</h2>
-          <div className="services-title-underline"></div>
+          <div className="services-title-underline" aria-hidden="true"></div>
           <p className="services-subtitle">Solutions adapted to your data needs</p>
         </div>
-        <div className="services-grid">
+        <div className="services-grid" role="list">
           {services.map((service, index) => (
             <div
               key={index}
               className="service-card"
               ref={addToRefs}
               style={{ animationDelay: `${index * 0.15}s` }}
+              role="listitem"
             >
               <div className="service-icon-container">
                 {React.cloneElement(service.icon, { size: 32, color: '#E4B31A' })}

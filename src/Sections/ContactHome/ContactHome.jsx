@@ -21,14 +21,14 @@ const ContactHome = () => {
     {
       title: "LinkedIn",
       icon: <Linkedin size={24} />,
-      description: "View my professional profile and network",
+      description: "Connect with me professionally and view my network",
       url: "https://www.linkedin.com/in/iyanou-eraste-akande",
       color: "#0077B5",
     },
     {
       title: "Upwork",
       icon: <Globe size={24} />,
-      description: "Discover my services and client reviews",
+      description: "Explore my services and verified client testimonials",
       url: "https://www.upwork.com/freelancers/~018b666e20302c5287",
       color: "#6FDA44",
     },
@@ -38,14 +38,7 @@ const ContactHome = () => {
       description: "eraste.akande@gmail.com",
       url: "mailto:eraste.akande@gmail.com",
       color: "#FEC514",
-    }/* ,
-    {
-      title: "Udemy Training",
-      icon: <BarChart size={24} />,
-      description: "Master Elasticsearch: From Beginner to Certification",
-      url: "https://www.udemy.com/course/maitriser-elasticsearch/?couponCode=ST7MT290425G1",
-      color: "#EA5252",
-    } */
+    }
   ];
 
   useEffect(() => {

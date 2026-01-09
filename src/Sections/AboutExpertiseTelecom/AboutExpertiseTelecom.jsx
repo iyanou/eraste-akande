@@ -97,8 +97,8 @@ function AboutExpertiseTelecom() {
               <Radio size={40} />
             </div>
             <p>
-              With this dual expertise in <strong>data & telecommunications</strong>, I offer 
-              precise technical solutions, aligned with both <strong>business needs</strong> and 
+              With this dual expertise in <strong>data & telecommunications</strong>, I offer
+              precise technical solutions, aligned with both <strong>business needs</strong> and{' '}
               <strong>infrastructure requirements</strong>.
             </p>
           </div>

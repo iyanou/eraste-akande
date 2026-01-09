@@ -4,8 +4,9 @@ import './TrainingList.css';
 
 function TrainingList() {
   const [activeCard, setActiveCard] = useState(null);
+  const [visibleCards, setVisibleCards] = useState(new Set());
   const trainingRefs = useRef([]);
-  
+
   const trainings = [
     {
       id: 1,
@@ -16,8 +17,8 @@ function TrainingList() {
     },
     {
       id: 2,
-      title: "Master Elasticsearch – From beginner to Elastic Engineer certification",
-      description: "Train step by step to official certification. Available on Udemy or in custom sessions, this training takes you from discovery to advanced mastery of Elasticsearch, towards certification.",
+      title: "Elasticsearch & Elastic Stack Training on Udemy",
+      description: "Comprehensive training programs available on Udemy with 4.7⭐ rating and 3,000+ students worldwide. Three courses available: 'Master Elasticsearch: From Beginner to Certification' (8h) covering fundamentals to advanced certification preparation, 'Kibana Expert: Master Data Analysis and Visualization' (6h) for building production-ready analytics solutions, and 'Introduction to the Elastic Stack' (2h) to get started with ELK from scratch. All courses available in English & French with lifetime access.",
       icon: <Book className="training-card-icon" aria-hidden="true" />,
       platform: "Udemy & Custom sessions"
     },
@@ -50,7 +51,12 @@ function TrainingList() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('training-card-visible');
+            const cardId = parseInt(entry.target.getAttribute('data-card-id'));
+            setVisibleCards(prev => {
+              const newSet = new Set(prev);
+              newSet.add(cardId);
+              return newSet;
+            });
           }
         });
       },
@@ -84,10 +90,11 @@ function TrainingList() {
         
         <div className="training-list-grid">
           {trainings.map((training, index) => (
-            <div 
+            <div
               key={training.id}
               ref={el => trainingRefs.current[index] = el}
-              className={`training-card ${activeCard === training.id ? 'training-card-active' : ''}`}
+              data-card-id={training.id}
+              className={`training-card ${visibleCards.has(training.id) ? 'training-card-visible' : ''} ${activeCard === training.id ? 'training-card-active' : ''}`}
               onClick={() => setActiveCard(activeCard === training.id ? null : training.id)}
               onKeyDown={(e) => handleKeyDown(e, training.id)}
               tabIndex="0"
@@ -112,9 +119,6 @@ function TrainingList() {
                     <span className="training-card-platform-label">Available on:</span>
                     <span className="training-card-platform-value">{training.platform}</span>
                   </div>
-                  <button className="training-card-button" aria-label={`Learn more about ${training.title}`}>
-                    Learn more
-                  </button>
                 </div>
               </div>
             </div>

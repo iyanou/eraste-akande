@@ -122,15 +122,17 @@
     transform: translateY(-10px);
     box-shadow: 0 15px 35px var(--shadow-color);
     outline: none;
+    opacity: 1;
   }
-  
+
   #training-list .training-card:focus-visible {
     outline: 3px solid var(--secondary-color);
   }
-  
+
   #training-list .training-card-active {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px var(--shadow-color);
+    opacity: 1;
   }
   
   /* En-tête de carte */
